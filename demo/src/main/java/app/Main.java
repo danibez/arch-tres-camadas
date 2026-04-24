@@ -1,7 +1,7 @@
 package app;
 
 import controller.ClienteController;
-import repository.ClienteRepository;
+import repository.IClienteRepository;
 import repository.FileClienteRepository;
 import repository.InMemoryClienteRepository;
 import service.IClienteService;
@@ -20,7 +20,7 @@ public class Main {
 
         String option = scanner.nextLine();
 
-        ClienteRepository clienteRepository;
+        IClienteRepository clienteRepository;
 
         if ("2".equals(option)) {
             clienteRepository = new FileClienteRepository("clientes.txt");
