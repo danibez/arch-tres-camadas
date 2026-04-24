@@ -1,15 +1,15 @@
 package service;
 
 import model.Cliente;
-import repository.ClienteRepository;
+import repository.IClienteRepository;
 
 import java.util.List;
 
-public class ClienteServiceImpl implements ClienteService {
+public class ClienteServiceImpl implements IClienteService {
 
-    private final ClienteRepository clienteRepository;
+    private final IClienteRepository clienteRepository;
 
-    public ClienteServiceImpl(ClienteRepository clienteRepository) {
+    public ClienteServiceImpl(IClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
 

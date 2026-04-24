@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class InMemoryClienteRepository implements ClienteRepository {
+public class InMemoryClienteRepository implements IClienteRepository {
 
     private final Map<Long, Cliente> database = new LinkedHashMap<>();
     private Long nextId = 1L;

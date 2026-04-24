@@ -4,7 +4,7 @@ import controller.ClienteController;
 import repository.ClienteRepository;
 import repository.FileClienteRepository;
 import repository.InMemoryClienteRepository;
-import service.ClienteService;
+import service.IClienteService;
 import service.ClienteServiceImpl;
 
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class Main {
             System.out.println("Repositório em memória selecionado.");
         }
 
-        ClienteService clienteService = new ClienteServiceImpl(clienteRepository);
+        IClienteService clienteService = new ClienteServiceImpl(clienteRepository);
         ClienteController clienteController = new ClienteController(clienteService, scanner);
 
         clienteController.start();

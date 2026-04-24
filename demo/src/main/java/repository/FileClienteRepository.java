@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class FileClienteRepository implements ClienteRepository {
+public class FileClienteRepository implements IClienteRepository {
 
     private final Path filePath;
 

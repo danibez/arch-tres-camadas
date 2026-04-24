@@ -1,17 +1,17 @@
 package controller;
 
 import model.Cliente;
-import service.ClienteService;
+import service.IClienteService;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class ClienteController {
 
-    private final ClienteService clienteService;
+    private final IClienteService clienteService;
     private final Scanner scanner;
 
-    public ClienteController(ClienteService clienteService, Scanner scanner) {
+    public ClienteController(IClienteService clienteService, Scanner scanner) {
         this.clienteService = clienteService;
         this.scanner = scanner;
     }
@@ -76,7 +76,9 @@ public class ClienteController {
         }
 
         System.out.println("=== LISTA DE CLIENTES ===");
-        clientes.forEach(System.out::println);
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente);
+        }
     }
 
     private int readInteger(String mensagem) {
